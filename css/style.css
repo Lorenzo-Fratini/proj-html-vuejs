@@ -26,6 +26,10 @@ p {
   line-height: 30px;
 }
 
+img {
+  
+}
+
 .page-button,
 .page-button-alt {
   width: max-content;
@@ -68,6 +72,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 .header-bg {
@@ -162,10 +167,6 @@ header {
   width: 32%;
 }
 
-.polaroid img {
-  width: 100%;
-}
-
 .polaroid > a {
   display: block;
   font-size: 1.1rem;
@@ -195,6 +196,25 @@ header {
   margin: 15px 0 0 0;
   color: #707070;
 }
+
+.polaroid-img-wrapper {
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.polaroid-img-wrapper img {
+  max-width: 100%;
+  height: 250px;
+  transform: scale(1.12);
+  transition: transform 1s;
+}
+
+.polaroid-img-wrapper img:hover {
+  transform: scale(1);
+}
+
 
 /* news-jumbo */
 .news-jumbo {
@@ -246,9 +266,93 @@ header {
 
 .tng-cont {
   width: 30%;
-  height: 100px;
-  background: red;
 }
+
+.tng-cont h2 {
+  color: #000;
+}
+
+.tng-cont h2::after {
+  content: "";
+  display: table;
+  width: 90px;
+  border-bottom: 2px solid #ff8d61;
+  margin: 20px 0 30px 0;
+}
+
+.tng-polaroid {
+  width: 100%;
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tng-img-wrapper {
+  width: 140px;
+  height: 115px;
+  overflow: hidden;
+}
+
+.tng-img-wrapper img {
+  max-width: 100%;
+  height: 115px;
+  transform: scale(1.12);
+  transition: transform 1s;
+}
+
+.tng-img-wrapper img:hover {
+  transform: scale(1);
+}
+
+.tng-polaroid-text {
+  width: 55%;
+}
+
+.tng-polaroid-text a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  color: #000;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.tng-polaroid-text a:hover {
+  color: #25a9bd;
+}
+
+.tng-polaroid-text span {
+  font-size: 0.8rem;
+  color: #525252;
+}
+
+/* banner */
+a.banner {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all .2s;
+}
+
+a.banner:hover {
+  background-color: #25a9bd;
+}
+
+a.banner i {
+  margin: 0 0 0 10px;
+}
+
+/* forum-section */
 
 
 
