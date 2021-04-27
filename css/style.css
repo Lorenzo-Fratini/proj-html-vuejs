@@ -26,8 +26,14 @@ p {
   line-height: 30px;
 }
 
-img {
-  
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img:hover {
+  cursor: pointer;
 }
 
 .page-button,
@@ -45,7 +51,7 @@ img {
 }
 
 .page-button {
-  background-color: #000;
+  background-color: #191919;
 }
 
 .page-button-alt {
@@ -62,6 +68,24 @@ img {
   font-weight: bold;
   font-size: 0.9rem;
   margin-left: 5px;
+}
+
+.title h3 {
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.title h2::after {
+  content: "";
+  display: table;
+  width: 90px;
+  border-bottom: 2px solid #ff8d61;
+  margin: 40px auto;
 }
 
 /* header */
@@ -139,24 +163,6 @@ header {
   padding: 120px 9%;
 }
 
-.news-title h3 {
-  text-align: center;
-}
-
-.news-title h2 {
-  font-size: 3rem;
-  text-align: center;
-  margin: 30px 0;
-}
-
-.news-title h2::after {
-  content: "";
-  display: table;
-  width: 90px;
-  border-bottom: 2px solid #ff8d61;
-  margin: 40px auto;
-}
-
 .polaroid-cont {
   width: 100%;
   display: flex;
@@ -172,7 +178,7 @@ header {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 20px 0 10px 0;
-  color: #000;
+  color: #191919;
   text-decoration: none;
   transition: all .2s;
 }
@@ -184,7 +190,7 @@ header {
 
 .polaroid span a {
   text-decoration: none;
-  color: #000;
+  color: #191919;
   transition: all .2s;
 }
 
@@ -269,7 +275,7 @@ header {
 }
 
 .tng-cont h2 {
-  color: #000;
+  color: #191919;
 }
 
 .tng-cont h2::after {
@@ -313,7 +319,7 @@ header {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 20px 0 10px 0;
-  color: #000;
+  color: #191919;
   text-decoration: none;
   transition: all .2s;
 }
@@ -334,7 +340,7 @@ a.banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #191919;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -353,7 +359,132 @@ a.banner i {
 }
 
 /* forum-section */
+.forum-section-cont {
+  width: 100%;
+  padding: 120px 9%;
+  background-color: #f2f2f2;
+}
 
+.box-cont {
+  width: 100%;
+}
+
+.box-row {
+  width: 100%;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  width: 22%;
+  height: 230px;
+  background-color: #fff;
+  border-top: 3px solid #25a9bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-wrapper {
+  width: max-content;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-wrapper h2 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.box-wrapper:hover h2 {
+  color: #ff8d61;
+}
+
+.icon-box {
+  width: 85px;
+  height: 85px;
+  background-color: #ff8d61;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box i {
+  color: #fff;
+  font-size: 2.6rem;
+}
+
+/* signup-banner */
+.signup-banner-cont {
+  width: 100%;
+  padding: 130px 9%;
+  background-image: url("../img/join_now_cta_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-banner-text {
+  width: 45%;
+  text-align: center;
+}
+
+.signup-banner-text h2 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.signup-banner-text p {
+  color: #fff;
+  margin: 30px 0;
+}
+
+.signup-banner-text a {
+  margin: auto;
+}
+
+/* newsletter */
+.newsletter-cont {
+  width: 100%;
+  padding: 80px 9%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-cont h3 {
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+.newsletter-form {
+  margin: 30px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input {
+  width: 400px;
+  padding: 18px;
+}
+
+.newsletter-form button {
+  border-color: rgba(226,226,226,0.5);
+  margin-left: 20px;
+}
 
 
 
