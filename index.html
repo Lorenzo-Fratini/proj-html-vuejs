@@ -15,7 +15,31 @@
     <div id="app">
 
       <!-- header -->
-      <header></header>
+      <header>
+        <nav>
+          <a href="#">
+            <img :src="'img/' + logo" alt="">
+          </a>
+          <ul>
+            <li v-for="(item, index) in navItems" @mouseenter="navHover(index)" @mouseleave="navHover(index)">
+              <a href="#">
+                <span :class="item.button ? 'page-button' : ''">
+                  {{ item.value }}
+                </span>
+                <div :class="'arrow-down ' + item.arrowDownActive"></div>
+                <div :class="'arrow-up ' + item.arrowTopActive"></div>
+              </a>
+              <ul :class="'dropdown ' + item.dropdownShow" v-if="item.dropdown">
+                <li v-for="elem in item.dropdown" class="dropdown-li">
+                  <a href="#">
+                    {{ elem }}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
       <!-- main -->
       <main>

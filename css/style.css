@@ -26,10 +26,18 @@ p {
   line-height: 30px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+li {
+  list-style-type: none;
 }
 
 img:hover {
@@ -89,20 +97,114 @@ img:hover {
 }
 
 /* header */
+.header-bg {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(39,170,190);
+}
+
 header {
   width: 100%;
   height: 100px;
-  background-color: rgba(39,170,190,0.9);
+  padding: 0 9%;
+  background-color: rgba(39,170,190,0.95);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
 }
 
-.header-bg {
+nav {
   width: 100%;
-  height: 100px;
-  background-color: rgb(39,170,190);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul,
+nav li,
+nav a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  padding-right: 50px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  position: relative;
+}
+
+nav a img {
+  width: 250px;
+}
+
+nav span.page-button {
+  font-size: 0.8rem;
+  padding: 12px 25px;
+}
+
+ul.dropdown {
+  height: auto;
+  background-color: rgba(39,170,190,0.85);
+  display: none;
+  position: absolute;
+  top: 133%;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+li.dropdown-li {
+  min-width: 180px;
+  padding: 18px 20px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+ul.dropdown li:hover {
+  background-color: #1c93a5;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-top: 13px solid #27aabe;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arrow-down.active {
+  display: block;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid rgba(39,170,190,0.85);
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arrow-up.active {
+  display: block;
 }
 
 /* jumbotron */
