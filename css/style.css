@@ -179,7 +179,7 @@ ul.dropdown li:hover {
   height: 0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
-  border-top: 13px solid #27aabe;
+  border-top: 13px solid rgba(39,170,190,0.98);
   display: none;
   position: absolute;
   top: 100%;
@@ -204,6 +204,68 @@ ul.dropdown li:hover {
 }
 
 .arrow-up.active {
+  display: block;
+}
+
+.bridge {
+  width: 150px;
+  height: 35px;
+  display: none;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+}
+
+li:hover .bridge {
+  display: block;
+}
+
+li.search {
+  padding: 0;
+  position: relative;
+}
+
+.search-input {
+  padding: 25px;
+  background-color: rgba(39,170,190,0.85);
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.search-input.active {
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+}
+
+.input-wrapper input {
+  width: 250px;
+  color: #707070;
+  padding: 15px;
+}
+
+.input-wrapper .page-button {
+  width: 57px;
+  height: 57px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-layover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  z-index: 9999;
+}
+
+.page-layover.active {
   display: block;
 }
 
@@ -586,6 +648,104 @@ a.banner i {
 .newsletter-form button {
   border-color: rgba(226,226,226,0.5);
   margin-left: 20px;
+}
+
+/* footer */
+.footer-top-cont {
+  width: 100%;
+  padding: 80px 9%;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-top-item {
+  width: 22%;
+}
+
+.footer-top-item h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+}
+
+.footer-top-item p {
+  padding: 10px 0;
+  color: #707070;
+}
+
+.footer-top-item li {
+  padding: 10px;
+  line-height: 30px;
+  border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
+  position: relative;
+}
+
+.footer-top-item i {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.footer-top-item a,
+.footer-bottom-cont .copy a,
+.footer-top-item i {
+  color: #191919;
+}
+
+.footer-top-item li:hover a,
+.footer-bottom-cont .copy a:hover,
+.footer-top-item li:hover i {
+  color: #25a9bd;
+}
+
+.footer-bottom-cont {
+  width: 100%;
+  padding: 50px 9%;
+  color: #707070;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-cont {
+  display: flex;
+}
+
+.social {
+  width: 47px;
+  height: 47px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border-radius: 100%;
+}
+
+.social a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-facebook {
+  background-color: #3b5998;
+}
+
+.bg-twitter {
+  background-color: #55acee;
+}
+
+.bg-instagram {
+  background-color: #3f729b;
+}
+
+.bg-youtube {
+  background-color: #cd201f;
 }
 
 

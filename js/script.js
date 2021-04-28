@@ -10,6 +10,10 @@ function init() {
 
         dropHover: false,
 
+        inputActive: '',
+
+        layoverActive: '',
+
         navItems: [
           {
             value: 'Home',
@@ -76,7 +80,80 @@ function init() {
             arrowTopActive: '',
             button: true
           }
-        ]
+        ],
+
+        footerLists: [
+          {
+            title: 'Popular Topics',
+            listItems: [
+              {
+                value: 'Nam a dolor volutpat massa auctor semper'
+              },
+              {
+                value: 'Sed euismod nunc urna fermentum arcu dapibus fringilla.'
+              },
+              {
+                value: 'Cras lacinia tellus id mauris finibus lacus molestie'
+              },
+              {
+                value: 'Curabitur a scelerisque ligula'
+              }
+            ]
+          },
+          {
+            title: 'Recent Topics',
+            listItems: [
+              {
+                value: 'Cras lacinia tellus id mauris finibus lacus molestie'
+              },
+              {
+                value: 'Proin at ligula sagittis vestibulum nisi vitae'
+              },
+              {
+                value: 'Sed nec metus at est tincidunt elementum'
+              },
+              {
+                value: 'Nulla egestas nulla eu nulla suscipit molestie'
+              }
+            ]
+          },
+          {
+            title: 'Latest Replies',
+            listItems: [
+              {
+                value: 'Cras lacinia tellus id mauris finibus lacus molestie'
+              },
+              {
+                value: 'Cras lacinia tellus id mauris finibus lacus molestie'
+              },
+              {
+                value: 'Nulla egestas nulla eu nulla suscipit molestie'
+              },
+              {
+                value: 'Mauris ac nibh quis eros sagittis lacinia a et dui'
+              }
+            ]
+          }
+        ],
+
+        footerIcons: [
+          {
+            value: 'fa-facebook-f',
+            class: 'bg-facebook'
+          },
+          {
+            value: 'fa-twitter',
+            class: 'bg-twitter'
+          },
+          {
+            value: 'fa-instagram',
+            class: 'bg-instagram'
+          },
+          {
+            value: 'fa-youtube',
+            class: 'bg-youtube'
+          }
+        ],
       },
 
       methods: {
@@ -93,8 +170,20 @@ function init() {
           this.navItems[0].arrowDownActive = 'active';
 
           console.log(this.navItems[index].arrowTopActive);
+        },
+
+        searchShow: function() {
+  
+          this.inputActive = 'active';
+          this.layoverActive = 'active';
+        },
+
+        searchHide: function() {
+          this.inputActive = '';
+          this.layoverActive = '';
         }
       },
+
 
       mounted() {
 

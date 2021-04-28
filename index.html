@@ -13,13 +13,16 @@
   </head>
   <body>
     <div id="app">
-
+      <div :class="'page-layover ' + layoverActive" @click="searchHide"></div>
       <!-- header -->
       <header>
+        <!-- nav -->
         <nav>
+          <!-- logo -->
           <a href="#">
             <img :src="'img/' + logo" alt="">
           </a>
+          <!-- nav-menu -->
           <ul>
             <li v-for="(item, index) in navItems" @mouseenter="navHover(index)" @mouseleave="navHover(index)">
               <a href="#">
@@ -27,6 +30,7 @@
                   {{ item.value }}
                 </span>
                 <div :class="'arrow-down ' + item.arrowDownActive"></div>
+                <div class="bridge"></div>
                 <div :class="'arrow-up ' + item.arrowTopActive"></div>
               </a>
               <ul :class="'dropdown ' + item.dropdownShow" v-if="item.dropdown">
@@ -36,6 +40,19 @@
                   </a>
                 </li>
               </ul>
+            </li>
+            <li class="search">
+              <a href="#" @click="searchShow">
+                <i class="fas fa-search"></i>
+              </a>
+              <div :class="'search-input ' + inputActive">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Search...">
+                  <a href="#" class="page-button">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -406,6 +423,47 @@
           </div>
         </div>
       </main>
+
+      <!-- footer -->
+      <footer>
+        <div class="footer-top-cont">
+          <div class="footer-top-item">
+            <h4>Avada Tech Forum</h4>
+            <p>
+              Sed semper, nisl id feugiat eleifend, erat est digssim felis, 
+              quis auctor elit enim nec ante. Cras et nibh risus. 
+              Pellentesque non mi sit amet mi intermentum.
+            </p>
+          </div>
+          <div v-for="list in footerLists" class="footer-top-item">
+            <h4>{{ list.title }}</h4>
+            <ul>
+              <li v-for="item in list.listItems">
+                <a href="#">
+                  <i class="fas fa-chevron-right"></i>
+                  {{ item.value }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer-bottom -->
+        <div class="footer-bottom-cont">
+          <div class="copy">
+            © Copyright 2012 - 2021 | Avada Theme by 
+            <a href="#">Theme Fusion</a>
+             | All Rights Reserved | Powered by 
+             <a href="#">WordPress</a>
+          </div>
+          <div class="social-cont">
+            <div v-for="icon in footerIcons" :class="'social ' + icon.class">
+              <a href="#">
+                <i :class="'fab ' + icon.value"></i>
+              </a> 
+            </div>
+          </div>
+        </div>
+      </footer>
     <!-- /app -->
     </div>
   </body>
