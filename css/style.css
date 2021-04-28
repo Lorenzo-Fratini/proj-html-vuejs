@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  max-height: 100vh;
+  min-height: 100%;
   font-family: "Fira Sans";
   font-size: 14px;
 }
@@ -258,8 +258,8 @@ li.search {
 }
 
 .page-layover {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   position: absolute;
   display: none;
   z-index: 9999;
