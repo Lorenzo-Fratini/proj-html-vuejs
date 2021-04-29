@@ -896,6 +896,10 @@ a.banner i {
   right: 5%;
 }
 
+.return-top:hover {
+  background-color: #25a9bd;
+}
+
 .return-top a {
   width: 100%;
   height: 100%;

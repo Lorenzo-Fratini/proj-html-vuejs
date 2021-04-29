@@ -193,13 +193,9 @@ function init() {
       }
     },
 
-    created() {
+    mounted() {
       window.addEventListener('scroll', this.handleScroll);
     },
-
-    destroyed() {
-      window.removeEventListener('scroll', this.handleScroll);
-    }
     
   })
 }
