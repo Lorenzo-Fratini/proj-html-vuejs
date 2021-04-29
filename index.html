@@ -14,13 +14,14 @@
   <body>
     <div id="app">
       <div :class="'page-layover ' + layoverActive" @click="searchHide"></div>
+      <div id="top"></div>
       <!-- header -->
       <header>
         <!-- nav -->
         <nav>
           <!-- logo -->
           <a href="#">
-            <img :src="'img/' + logo" alt="">
+            <img :src="'img/' + logo" alt="logo">
           </a>
           <!-- nav-menu -->
           <ul>
@@ -42,9 +43,9 @@
               </ul>
             </li>
             <li class="search">
-              <a href="#" @click="searchShow">
+              <div class="search-icon" @click="searchShow">
                 <i class="fas fa-search"></i>
-              </a>
+              </div>
               <div :class="'search-input ' + inputActive">
                 <div class="input-wrapper">
                   <input type="text" placeholder="Search...">
@@ -316,6 +317,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fas fa-file-alt"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>News & Community</h2>
                 </div>
@@ -325,6 +327,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fab fa-apple"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Apple Forum</h2>
                 </div>
@@ -334,6 +337,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fab fa-windows"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Microsoft Forum</h2>
                 </div>
@@ -343,6 +347,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fab fa-android"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Android Forum</h2>
                 </div>
@@ -356,6 +361,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fas fa-coffee"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>General Discussion</h2>
                 </div>
@@ -365,6 +371,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fas fa-cubes"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Apps & Software</h2>
                 </div>
@@ -374,6 +381,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fas fa-laptop"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Gadget & Stuff</h2>
                 </div>
@@ -383,6 +391,7 @@
                 <div class="box-wrapper">
                   <div class="icon-box">
                     <i class="fas fa-wrench"></i>
+                    <div class="icon-animation-box"></div>
                   </div>
                   <h2>Tutorials & Guides</h2>
                 </div>
@@ -457,13 +466,22 @@
           </div>
           <div class="social-cont">
             <div v-for="icon in footerIcons" :class="'social ' + icon.class">
+              <div class="icon-name">
+                {{ icon.name }}
+                <div class="icon-arrow-down"></div>
+              </div>
               <a href="#">
-                <i :class="'fab ' + icon.value"></i>
+                <i :class="'fab ' + icon.icon"></i>
               </a> 
             </div>
           </div>
         </div>
       </footer>
+      <div class="return-top">
+        <a href="#top">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </div>
     <!-- /app -->
     </div>
   </body>

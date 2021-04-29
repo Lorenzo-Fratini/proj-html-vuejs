@@ -5,11 +5,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-height: 100%;
   font-family: "Fira Sans";
   font-size: 14px;
+  position: relative;
 }
 
 h2 {
@@ -179,7 +184,7 @@ ul.dropdown li:hover {
   height: 0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
-  border-top: 13px solid rgba(39,170,190,0.98);
+  border-top: 13px solid rgba(39,170,190,0.95);
   display: none;
   position: absolute;
   top: 100%;
@@ -223,6 +228,14 @@ li:hover .bridge {
 li.search {
   padding: 0;
   position: relative;
+}
+
+.search-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
 }
 
 .search-input {
@@ -476,6 +489,7 @@ li.search {
 
 .tng-polaroid-text {
   width: 55%;
+  margin-left: 10px;
 }
 
 .tng-polaroid-text a {
@@ -566,6 +580,10 @@ a.banner i {
   margin: 15px 0;
 }
 
+.box-wrapper:hover .icon-box {
+  transform: scale(0.9);
+}
+
 .box-wrapper:hover h2 {
   color: #ff8d61;
 }
@@ -578,11 +596,81 @@ a.banner i {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s;
+  position: relative;
 }
 
 .icon-box i {
   color: #fff;
   font-size: 2.6rem;
+}
+
+@keyframes icon-animation {
+  0%   {
+    width: 80px;
+    height: 80px;
+  }
+  10%{
+    width: 85px;
+    height: 85px;
+  }
+  20%  {
+    width: 90px;
+    height: 90px;
+    opacity: 0.9;
+  }
+  30%  {
+    width: 95px;
+    height: 95px;
+  }
+  40%{
+    width: 100px;
+    height: 100px;
+  }
+  50%{
+    width: 105px;
+    height: 105px;
+  }
+  60%{
+    width: 110px;
+    height: 110px;
+  }
+  70%{
+    width: 115px;
+    height: 115px;
+  }
+  80%{
+    width: 120px;
+    height: 120px;
+  }
+  90%{
+    width: 125px;
+    height: 125px;
+  }
+  100% {
+    width: 125px;
+    height: 125px;
+    opacity: 0;
+  }
+}
+
+.icon-animation-box {
+  width: 85px;
+  height: 85px;
+  transform: scale(0.9);
+  background-color: transparent;
+  border-radius: 100%;
+  box-shadow: 2px 2px 14px 12px rgba(255,141,97,0.7);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: icon-animation 1.2s ease-out infinite;
+}
+
+.box-wrapper:hover .icon-animation-box {
+  display: block;
 }
 
 /* signup-banner */
@@ -720,6 +808,7 @@ a.banner i {
   margin-left: 10px;
   font-size: 1.2rem;
   border-radius: 100%;
+  position: relative;
 }
 
 .social a {
@@ -732,20 +821,88 @@ a.banner i {
   align-items: center;
 }
 
+.icon-name {
+  font-size: 0.7rem;
+  color: #fff;
+  background-color: #191919;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.icon-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #191919;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.social:hover .icon-name,
+.social:hover .icon-arrow-down {
+  display: block;
+}
+
 .bg-facebook {
   background-color: #3b5998;
+}
+
+.bg-facebook:hover {
+  opacity: 0.8;
 }
 
 .bg-twitter {
   background-color: #55acee;
 }
 
+.bg-twitter:hover {
+  opacity: 0.8;
+}
+
 .bg-instagram {
   background-color: #3f729b;
 }
 
+.bg-instagram:hover {
+  opacity: 0.8;
+}
+
 .bg-youtube {
   background-color: #cd201f;
+}
+
+.bg-youtube:hover {
+  opacity: 0.8;
+}
+
+.return-top {
+  width: 50px;
+  height: 35px;
+  background-color: #191919;
+  opacity: 0.8;
+  border-radius: 5px 5px 0 0;
+  transition: 0.2s;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+}
+
+.return-top a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 
