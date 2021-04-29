@@ -14,6 +14,8 @@ function init() {
 
       layoverActive: '',
 
+      scrollpx: 0,
+
       navItems: [
         {
           value: 'Home',
@@ -184,8 +186,20 @@ function init() {
         
         this.inputActive = '';
         this.layoverActive = '';
+      },
+
+      handleScroll: function() {
+        this.scrollpx = window.scrollY;
       }
     },
+
+    created() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
     
   })
 }
